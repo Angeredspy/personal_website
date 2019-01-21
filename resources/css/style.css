@@ -1,0 +1,567 @@
+/*-----------------------------------------------------*/
+/*SETTING UP THE HOMEPAGE*/
+/*-----------------------------------------------------*/
+* { 
+margin: 0; 
+padding: 0; 
+-webkit-box-sizing: border-box; 
+box-sizing: border-box;
+} 
+
+html,
+body {
+    background-color: aliceblue;
+    color: #555; 
+    font-family: 'Lato',sans-serif; 
+    font-weight: 300;
+    font-size: 20px; 
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+} 
+
+.clearfix {zoom:1}
+.clearfix:after { 
+    content: '.';
+    clear: both;
+    display:block; 
+    height:0; 
+    visibility: hidden;
+}
+/*-----------------------------------------------------*/
+/*HEADER
+/*-----------------------------------------------------*/
+
+header { 
+background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.5)),to(rgba(0, 0, 0, 0.5))),url(img/newyork-min.jpg); 
+background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(img/newyork-min.jpg);
+background-position: center; 
+background-size: cover; 
+height: 100vh;
+background-attachment: fixed;
+} 
+/* main-navigation*/
+.main-nav { 
+float: right; 
+width: auto; 
+list-style: none; 
+margin-top: 55px; 
+}  
+
+.main-nav li { 
+display: inline-block; 
+margin-left:40px; 
+} 
+
+.main-nav li a:link, 
+.main-nav li a:visited { 
+color: #cadadb; 
+text-decoration: none; 
+text-transform: uppercase; 
+font-size: 85%; 
+border-bottom: 2px solid transparent;  
+-webkit-transition: border-bottom 0.4s;  
+transition: border-bottom 0.4s; 
+padding: 8px 0; 
+} 
+
+.main-nav li a:hover, 
+.main-nav li a:active { 
+border-bottom: 2px solid #4F2FF0;   
+color: snow;
+} 
+
+.header-deets { 
+position: absolute; 
+width: 1140px; 
+top: 50%;
+left: 50%; 
+-webkit-transform: translate(-50%, -50%); 
+transform: translate(-50%, -50%);
+} 
+
+.logo{ 
+height: 100px; 
+width:auto; 
+float: left;
+margin-top: 20px;  
+border-radius: 50px;
+}  
+/* Mobile-Nav */
+.mobile-nav-icon {
+    float:right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky-Nav */
+.sticky {
+    position:fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: rgba(54, 70, 89, 0.98); 
+    z-index: 9999;
+}  
+
+.sticky .main-nav { 
+    margin-top: 18px;
+} 
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: #cadadb;
+    padding: 16px 0;
+} 
+.sticky .logo {display: none;}
+.sticky .logo-black { 
+display: block;
+}
+
+.logo-black {
+    display: none;
+    height:50px; 
+    width: auto; 
+    float: left;
+    margin: 5px 0;
+    border-radius: 50px;
+}
+
+/*-------HEADINGS-------*/
+
+h1, 
+h2, 
+h3 {  
+    font-weight: 300;
+    text-transform: uppercase;  
+   }  
+
+
+h1 {
+    margin-top: 0; 
+    margin-bottom: 15px;
+    color: #cadadb; 
+    font-size: 240%; 
+    word-spacing: 3px;
+    letter-spacing: 1px; 
+}  
+
+h2 { 
+font-size: 180%; 
+word-spacing:2px; 
+text-align: center;
+margin-bottom: 30px; 
+letter-spacing: 1px;
+} 
+
+h2:after { 
+display: block; 
+height: 2px; 
+background-color: #4F2FF0; 
+content: " "; 
+width:100; 
+margin: 0 80px; 
+margin-top: 30px;
+
+} 
+
+h3 { 
+margin-bottom: 9px; 
+text-align: center; 
+font-size: 115%;
+}
+
+/*-----------------------------------------------------*/
+/*REUSABLE COMPONENTS
+/*-----------------------------------------------------*/ 
+
+.row {
+    max-width: 1140px; 
+    margin: 0 auto;
+    }  
+
+section { 
+padding:75px 0px; 
+
+} 
+
+.box { 
+padding: 1%
+    
+}  
+
+span {
+  color:#447ff0;
+}  
+
+.clearfix {zoom:1}
+.clearfix:after { 
+    content: '.';
+    clear: both;
+    display:block; 
+    height:0; 
+    visibility: hidden;
+} 
+
+figcaption {
+    text-align:right; 
+    margin-right: 85px;
+}
+
+
+/*-------PARAGRAPHS-------*/
+
+.long-copy {
+    
+    line-height: 145%; 
+    text-align: center; 
+    margin-bottom: 10px;
+}  
+
+.box p { 
+font-size: 90%; 
+line-height: 145%;
+text-align: center; 
+} 
+
+.Edfacts-step p { 
+text-align:center; 
+line-height: 145%;
+
+}
+
+
+
+/*-------ICONS-------*/ 
+
+.icon{ 
+font-size: 355%;
+display: block; 
+color: #4F2FF0;
+margin-bottom: 10px; 
+text-align: center;
+}   
+
+.icon-smallz {
+display: inline-block;
+width: 30px;
+color: #4F2FF0; 
+text-align: center;
+font-size:120%;  
+} 
+
+
+/*-----------------------------------------------------*/
+/*MEALS PHOTO GRID
+/*-----------------------------------------------------*/
+.enf-section { 
+padding:0;
+
+}
+
+
+.enf-images{ 
+list-style: none; 
+width: 100%; 
+    
+
+    } 
+
+.enf-images li{ 
+display:block; 
+float:left; 
+width: 33.3%; 
+ }  
+
+.enf-photo { 
+width: 100%;
+height:auto;
+overflow: hidden; 
+background-color:black; 
+} 
+
+.enf-photo img {
+    opacity: 0.7;
+    width: 100%; 
+    margin: 0;  
+    -webkit-transform: scale(1.15);  
+    transform: scale(1.15);  
+    -webkit-transition:opacity 0.5s, -webkit-transform 1s;  
+    transition:opacity 0.5s, -webkit-transform 1s;  
+    transition:transform 1s, opacity 0.5s;  
+    transition:transform 1s, opacity 0.5s, -webkit-transform 1s;
+  } 
+
+
+.enf-photo img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);  
+ }   
+
+/*-----------------------------------------------------*/
+/*EDUCATION SECTION
+/*-----------------------------------------------------*/
+
+.steps-box:first-child {
+    text-align: right; 
+    padding-right: 3%; 
+    margin-top: 30px;  
+
+
+} 
+
+.steps-box:last-child {
+    padding-left: 3%;  
+    margin-top: 70px; 
+    position: relative;
+    
+}
+
+.suny-picture { 
+    width:50%; 
+    margin-right: 90px; 
+    border-radius: 130px;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+}   
+
+.suny-picture:hover { 
+    width: 70%;
+}  
+
+.education{ 
+background-color:#f0f8ff ; 
+
+
+} 
+
+.education h2 { 
+margin-top: -15px;  
+
+
+}
+
+.Edfacts-step { 
+margin-bottom: 50px;
+} 
+
+
+.Edfacts-step:last-of-type{
+    margin-bottom: 85px;
+    
+}
+
+.Edfacts-step div { 
+color:#4F2FF0;  
+border: solid 2px #4F2FF0; 
+display: inline-block; 
+border-radius: 50%; 
+height: 55px; 
+width: 50px; 
+text-align: center; 
+padding: 5px; 
+float: left; 
+font-size: 150%;
+margin-right:25px;
+}  
+
+
+.btn-app1 img { 
+height: 80px; 
+width: auto; 
+margin-right:180px;  
+}   
+
+.btn-app2 img { 
+height: 80px; 
+width: auto; 
+margin-right:180px;   
+position: absolute;   
+margin-left: 180px;
+}  
+ 
+/*-----------------------------------------------------*/
+/*ABOUT ME SECTION
+/*-----------------------------------------------------*/
+
+.aboutsteps-box:first-child {
+    text-align: right; 
+    padding-right: 3%; 
+    margin-top: 30px;   
+} 
+
+.aboutsteps-box:last-child {
+    padding-left: 3%;  
+    margin-top: 70px; 
+    position: relative; 
+    text-align: center;    
+}
+
+.profile-picture { 
+    width:95%; 
+    margin-right: 90px; 
+    border-radius: 135px;
+    -webkit-transition: width 1s;
+    transition: width 1s;
+}   
+
+.education{ 
+background-color:#f0f8ff ; 
+}
+
+.boutme-step { 
+margin-bottom: 30px; 
+line-height: 145%; 
+font-size: 19.2px;
+} 
+
+
+.boutme-step:last-of-type{
+margin-bottom: 30px; 
+line-height: 145%;
+font-size: 19.2px;
+}
+
+.boutme-step div { 
+color:#4F2FF0;  
+border: solid 2px #4F2FF0; 
+display: inline-block; 
+border-radius: 50%; 
+height: 50px; 
+width: 50px; 
+text-align: center; 
+padding: 5px; 
+float: left; 
+font-size: 180%;
+margin-right:25px;
+
+}   
+
+/*-----------------------------------------------------*/
+/*BUTTONS
+/*-----------------------------------------------------*/
+ 
+.button:link, 
+.button:visited { 
+display: inline-block; 
+padding: 10px 30px; 
+font-weight: 300px; 
+text-decoration: none; 
+border-radius: 200px; 
+margin-right: 15px; 
+-webkit-transition: background-color 0.4s, border 0.4s, color 0.4s; 
+transition: background-color 0.4s, border 0.4s, color 0.4s;
+} 
+
+.button1:link, 
+.button1:visited { 
+background-color: #447ff0; 
+border: 1px solid #447ff0; 
+color:azure;
+} 
+
+.button2:link, 
+.button2:visited { 
+border: 1px solid #447ff0; 
+color: #cadadb;
+}  
+
+.button:hover, 
+.button:active { 
+background-color: #4F2FF0;
+} 
+
+.button1:hover, 
+.button1:active { 
+border: 1px solid #4F2FF0;  
+color: snow;
+} 
+
+.button2:hover, 
+.button2:active { 
+border: 1px solid #4F2FF0; 
+color: snow;
+}  
+
+/*-----------------------------------------------------*/
+/*CONTACT
+/*-----------------------------------------------------*/ 
+
+.contact{ 
+background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))), url(img/nybuild-min.jpg); 
+background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(img/nybuild-min.jpg); 
+background-attachment: fixed; 
+background-size: cover;
+}  
+
+.contact h2 {
+color: #cadadb;
+    
+} 
+
+.contact p {
+color: #cadadb;
+    
+}
+
+.email-me { 
+padding-left: 100px;
+color: #cadadb;
+} 
+.call-me { 
+padding-left: 180px;
+color: #cadadb;
+} 
+
+/*-----------------------------------------------------*/
+/*Animations
+/*-----------------------------------------------------*/ 
+ 
+.js--wp-1, 
+.js--wp-2,
+.js--wp-3 { 
+    opacity: 0; 
+    -webkit-animation-duration: 1s; 
+} 
+
+.js--wp-1.animated {
+    opacity: 1;
+} 
+
+.js--wpp-1, 
+.js--wpp-2, 
+.js--wpp-3 { 
+    opacity: 0; 
+} 
+
+.js--wpp-1.animated,
+.js--wpp-2.animated, 
+.js--wpp-3.animated {
+    opacity: 1;
+} 
+
+.js--wppp-1, 
+.js--wppp-2, 
+.js--wppp-3 { 
+    opacity: 0;
+} 
+
+.js--wppp-1.animated,
+.js--wppp-2.animated, 
+.js--wppp-3.animated {
+    opacity: 1;
+}
+ 
+.copyright { 
+font-size: 12px;
+}
+
+
+
+
